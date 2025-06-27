@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function Home({ products }) {
   return (
-    <div>
-      <h1>Product List</h1>
+    <div className="container">
+      <h1 className="text-3xl font-bold text-center mb-8">Product Showcase</h1>
       <ul className="product-list">
         {products.map(product => (
           <li key={product.id} className="product-item">

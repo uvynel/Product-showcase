@@ -21,14 +21,20 @@ export default function ProductDetail({ product }) {
 
   return (
     <div className="product-detail">
-      <h1>{product.title}</h1>
-      <img src={product.image} alt={product.title} className="product-image" />
-      <p>Price: ${product.price}</p>
-      <p>Category: {product.category}</p>
-      <p>{product.description}</p>
-      <button onClick={toggleFavorite} className="favorite-button">
-        {isFavorite ? 'Remove from Favorite' : 'Add to Favorite'}
-      </button>
+      <div className="product-detail-content">
+        <div className="product-image-container">
+          <img src={product.image} alt={product.title} className="product-image" />
+        </div>
+        <div className="product-info">
+          <h1 className="product-title-details">{product.title}</h1>
+          <p className="price">Price: ${product.price}</p>
+          <p className="category">Category: {product.category}</p>
+          <p className="description">{product.description}</p>
+          <button onClick={toggleFavorite} className="favorite-button">
+            {isFavorite ? 'Remove from Favorite' : 'Add to Favorite'}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
